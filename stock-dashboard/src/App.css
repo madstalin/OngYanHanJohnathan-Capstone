@@ -1,13 +1,10 @@
-./* Reset */
-
-
-<style jsx global>{`
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-`}</style>
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
 
 body {
   background: #f4f6f8;
