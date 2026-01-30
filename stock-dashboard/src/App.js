@@ -1,68 +1,70 @@
+//import { useState } from "react";
+import "./App.css";
 import { useState } from "react";
-//import "./App.css";
 
-function StockForm({ onAddStock }) {
+function FinanceDashboard() {
   const [symbol, setSymbol] = useState("");
   const [quantity, setQuantity] = useState("");
   const [price, setPrice] = useState("");
+  const [stocks, setStocks] = useState([]);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const addStock = () => {
+    if (!symbol || !quantity || !price) return;
 
-    if (!symbol || quantity <= 0 || price <= 0) return;
-
-    onAddStock({
+    const newStock = {
       symbol: symbol.toUpperCase(),
       quantity: Number(quantity),
-      purchasePrice: Number(price),
-    });
+      price: Number(price),
+    };
 
-    // Reset form
+    setStocks([...stocks, newStock]);
+
+    // reset inputs
     setSymbol("");
     setQuantity("");
     setPrice("");
   };
 
   return (
-    <form onSubmit={handleSubmit} style={{ maxWidth: 400 }}>
-      <div>
-        <label>Stock Symbol</label>
+    <div style={{ padding: "24px", maxWidth: "600px" }}>
+      <h1>Finance Dashboard</h1><br />
+
+      <div style={{ display: "flex", gap: "8px", marginBottom: "24px" }}>
         <input
-          type="text"
+          placeholder="Symbol"
           value={symbol}
           onChange={(e) => setSymbol(e.target.value)}
-          placeholder="AAPL"
-          required
         />
-      </div>
-
-      <div>
-        <label>Quantity</label>
         <input
           type="number"
+          placeholder="Quantity"
           value={quantity}
           onChange={(e) => setQuantity(e.target.value)}
-          min="1"
-          required
         />
-      </div>
-
-      <div>
-        <label>Purchase Price ($)</label>
         <input
           type="number"
-          step="0.01"
+          placeholder="Price"
           value={price}
           onChange={(e) => setPrice(e.target.value)}
-          min="0"
-          required
         />
+        <button onClick={addStock}>Add Stock</button>
       </div>
 
-      <button type="submit">Add Stock</button>
-    </form>
+      <h2>Stock List</h2><br />
+
+      {stocks.length === 0 ? (
+        <p>No stocks added yet.</p>
+      ) : (
+        <ul>
+          {stocks.map((stock, index) => (
+            <li key={index}>
+              {stock.symbol} — {stock.quantity} shares @ ${stock.price}
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
   );
 }
 
-export default StockForm;
-
+export default FinanceDashboard;
