@@ -1,0 +1,68 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: left;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 12px;
+    display: flex;
+
+}
+
+.container input {
+  height: 45px;
+  padding: 0 16px;
+  font-size: 18px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  width: 220px;
+}
+
+.container button {
+  height: 45px;
+  padding: 0 20px;
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  background-color: #0d6efd;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.stocklist {
+  color: black;
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.stock {
+  color: black;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
