@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+import ProfitLoss from './ProfitLoss.jsx';
 
 function App() {
   const [stockSymbol, setStockSymbol] = useState("");
