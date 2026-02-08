@@ -3,9 +3,9 @@ import './App.css'
 import ProfitLoss from './ProfitLoss.jsx';
 
 function App() {
-  const [stockSymbol, setStockSymbol] = useState("");
+  const [stocksymbol, setStockSymbol] = useState("");
   const [quantity, setQuantity] = useState("");
-  const [purchasePrice, setPurchasePrice] = useState("");
+  const [purchaseprice, setPurchasePrice] = useState("");
   const addStock = () => {
     
   }
@@ -19,8 +19,8 @@ function App() {
       <div className="container">
         <input
         type="text"
-        stockSymbol={stockSymbol}
-        onChange={(e) => setStockSymbol(e.target.stockSymbol)}
+        stocksymbol={stocksymbol}
+        onChange={(e) => setStockSymbol(e.target.stocksymbol)}
         placeholder="Stock Symbol"
         />
 
@@ -33,8 +33,8 @@ function App() {
 
        <input
         type="text"
-        purchasePrice={purchasePrice}
-        onChange={(e) => setPurchasePrice(e.target.purchasePrice)}
+        purchaseprice={purchaseprice}
+        onChange={(e) => setPurchasePrice(e.target.purchaseprice)}
         placeholder="Purchase Price"
         />
 
