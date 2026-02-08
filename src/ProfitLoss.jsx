@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 function StockCard() {
-  const symbol = "AAPL";
+  const stocksymbol = "AAPL";
   const quantity = 2;
   const purchasePrice = 123.99;
   const currentPrice = 167.15;
@@ -11,7 +11,7 @@ function StockCard() {
 
   return (
     <div className="card">
-      <p>Symbol: {symbol}</p>
+      <p>Symbol: {stocksymbol}</p>
       <p>Quantity: {quantity}</p>
       <p>Purchase Price: {purchasePrice}</p>
       <p>Current Price: {currentPrice}</p>
