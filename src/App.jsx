@@ -6,8 +6,9 @@ function App() {
   const [stocksymbol, setStockSymbol] = useState("");
   const [quantity, setQuantity] = useState("");
   const [purchaseprice, setPurchasePrice] = useState("");
-  const addStock = () => {
-    
+  const [ProfitLoss, setProfitLoss] = useState("");
+  const addStock = (event) => {
+      setProfitLoss(event.target.value)
   }
 
   return (
