@@ -26,3 +26,5 @@ function StockCard() {
     </div>
   );
 }
+
+export default StockCard;
