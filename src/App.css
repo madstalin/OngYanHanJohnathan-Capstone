@@ -16,17 +16,7 @@
   text-align: left;
 }
 
-/* App logo styling */
-.logo {
-  /* Control logo width */
-  width: 300px;
 
-  /* Keep image aspect ratio */
-  height: auto;
-
-  /* Space below logo */
-  margin-bottom: 8px;
-}
 
 /* 
   Form container (stock input form)
