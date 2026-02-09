@@ -1,67 +1,146 @@
+/* 
+  :root refers to the highest-level element in the document (html).
+  Variables and global styles are often placed here.
+*/
 :root {
+  /* Default font stack (browser picks the first available) */
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+  /* Space between lines of text */
   line-height: 1.5;
+
+  /* Default font thickness */
   font-weight: 400;
 
+  /* Allows browser to switch between light and dark themes */
   color-scheme: light dark;
+
+  /* Default text color (white with slight transparency) */
   color: rgba(255, 255, 255, 0.87);
+
+  /* Default background color (dark gray) */
   background-color: #242424;
 
+  /* Prevents fake bold/italic text rendering */
   font-synthesis: none;
+
+  /* Improves text rendering for readability */
   text-rendering: optimizeLegibility;
+
+  /* Smooth fonts on WebKit browsers (Chrome, Safari) */
   -webkit-font-smoothing: antialiased;
+
+  /* Smooth fonts on macOS Firefox */
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Default link styles */
 a {
+  /* Slightly bolder text */
   font-weight: 500;
+
+  /* Link color */
   color: #646cff;
+
+  /* Remove underline */
   text-decoration: inherit;
 }
+
+/* Link hover effect */
 a:hover {
+  /* Darker blue when hovering */
   color: #535bf2;
 }
 
+/* Global body styles */
 body {
+  /* Remove default browser margin */
   margin: 0;
+
+  /* Use flexbox for layout */
   display: flex;
+
+  /* Center content horizontally and vertically */
   place-items: center;
+
+  /* Prevent layout from shrinking too much on small screens */
   min-width: 320px;
+
+  /* Make body at least full viewport height */
   min-height: 100vh;
 }
 
+/* Main heading style */
 h1 {
-  font-size: 3.2em;
+  /* Slightly larger text size */
+  font-size: 2.1em;
+
+  /* Reduce vertical spacing for headings */
   line-height: 1.1;
 }
 
+/* Default button styling */
 button {
+  /* Rounded corners */
   border-radius: 8px;
+
+  /* Invisible border to prevent layout shift on hover */
   border: 1px solid transparent;
+
+  /* Inner spacing */
   padding: 0.6em 1.2em;
+
+  /* Text size */
   font-size: 1em;
+
+  /* Slightly bold text */
   font-weight: 500;
+
+  /* Use same font as the rest of the app */
   font-family: inherit;
+
+  /* Dark background */
   background-color: #1a1a1a;
+
+  /* Pointer cursor on hover */
   cursor: pointer;
+
+  /* Smooth transition for border color */
   transition: border-color 0.25s;
 }
+
+/* Button hover effect */
 button:hover {
+  /* Blue border when hovering */
   border-color: #646cff;
 }
+
+/* Button focus styles (keyboard accessibility) */
 button:focus,
 button:focus-visible {
+  /* Visible outline when tabbing with keyboard */
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+/* 
+  Light mode styles
+  Automatically applied when user prefers light theme
+*/
 @media (prefers-color-scheme: light) {
   :root {
+    /* Dark text for light background */
     color: #213547;
+
+    /* White background */
     background-color: #ffffff;
   }
+
+  /* Lighter hover color for links in light mode */
   a:hover {
     color: #747bff;
   }
+
+  /* Light button background */
   button {
     background-color: #f9f9f9;
   }
