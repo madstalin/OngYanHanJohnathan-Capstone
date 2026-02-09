@@ -19,6 +19,7 @@ import ProfitLoss from './ProfitLoss.jsx'
 import { useStocks } from './StockContext.jsx'
 
 function App() {
+<<<<<<< HEAD
   /* -------- FORM INPUT STATE -------- */
   const [stockSymbol, setStockSymbol] = useState('')
   const [quantity, setQuantity] = useState('')
@@ -76,6 +77,14 @@ function App() {
       setQuantity('')
       setPurchasePrice('')
     }
+=======
+  const [stocksymbol, setStockSymbol] = useState("");
+  const [quantity, setQuantity] = useState("");
+  const [purchaseprice, setPurchasePrice] = useState("");
+  const [ProfitLoss, setProfitLoss] = useState("");
+  const addStock = (event) => {
+      setProfitLoss(event.target.value)
+>>>>>>> d664a9e4b30dc151cbbf65ead0d31fe4b011eda4
   }
 
   return (
