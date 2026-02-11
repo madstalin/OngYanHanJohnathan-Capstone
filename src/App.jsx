@@ -79,7 +79,7 @@ function App() {
     <>
       {/* -------- HEADER -------- */}
       <div className="header">
-        <img src={logo} alt="Finance Dashboard Logo" className="logo" />
+        
         <h1>Finance Dashboard</h1>
       </div>
 
