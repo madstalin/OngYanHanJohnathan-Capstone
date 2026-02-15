@@ -2,7 +2,7 @@
 import './App.css'
 
 // Import logo image from assets folder
-import logo from './assets/Logo.png'
+//import logo from './assets/Logo.png'
 
 // Import form component (handles adding stocks)
 import StockForm from './components/StockForm.jsx'
@@ -20,10 +20,10 @@ function App() {
   return (
     <>
       <div className="header">
-        <img
-          src={logo}
-          alt="Finance Dashboard Logo"
-          className="logo"
+        //<img
+          //src={logo}
+          //alt="Finance Dashboard Logo"
+          //className="logo"
         />
         <h1>Finance Dashboard</h1>
       </div>
