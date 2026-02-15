@@ -20,7 +20,7 @@ function App() {
   return (
     <>
       <div className="header">
-        //<img
+        <img
           //src={logo}
           //alt="Finance Dashboard Logo"
           //className="logo"
